@@ -1,51 +1,43 @@
 import React, { Component } from 'react';
+import { Card, CardImg, CardImgOverlay, CardText, CardBody, CardTitle } from 'reactstrap';
 
 class Directory extends Component {
     constructor(props) {
         super(props);
         this.state = {
-            teas: [
-                {
-                    id: 0,
-                    name: 'Black Tea',
-                    image: 'assets/images/black-tea.jpg',
-                    description: "Have some tea"
-                },
-                {
-                    id: 1,
-                    name: 'White Tea',
-                    image: 'assets/images/white-tea.jpg',
-                    description: "Have some more tea"
-                },
-                {
-                    id: 2,
-                    name: 'Ginseng Tea',
-                    image: 'assets/images/ginseng-tea.jpg',
-                    description: "Even more tea"
-                },
-                {
-                    id: 3,
-                    name: 'Green Tea',
-                    image: 'assets/images/green-tea.jpg',
-                    description: "Also more tea"
-                },
-                {
-                    id: 4,
-                    name: 'Oolong Tea',
-                    image: 'assets/images/oolong-tea.jpg',
-                    description: "More tea for you"
-                }
-            ],
+            selectedTea: null
         };
     }
 
+    onTeaSelect(tea) {
+        this.setState({selectedTea: tea});
+    }
+
+    renderSelectedTea(tea) {
+        if(tea) {
+            return (
+                <Card>
+                    <CardImg top src={tea.image} alt={tea.name} />
+                    <CardBody>
+                        <CardTitle>{tea.name}</CardTitle>
+                        <CardText>{tea.description}</CardText>
+                    </CardBody>
+                </Card>
+            );
+        }
+        return <div />
+    }
+
     render() {
-        const directory = this.state.teas.map(tea => {
+        const directory = this.props.teas.map(tea => {
         return (
-            <div key={tea.id} className="col">
-                <img src={tea.image} alt={tea.name} />
-                <h2>{tea.name}</h2>
-                <p>{tea.description}</p>
+            <div key={tea.id} className="col-md-5 m-1">
+                <Card onClick={() => this.onTeaSelect(tea)}>
+                    <CardImg width="100%" src={tea.image} alt={tea.name} />
+                    <CardImgOverlay>
+                        <CardTitle>{tea.name}</CardTitle>
+                    </CardImgOverlay>
+                </Card>
             </div>
         );
     });
@@ -54,6 +46,11 @@ class Directory extends Component {
         <div className="container">
             <div className="row">
                 {directory}
+            </div>
+            <div className="row">
+                <div className="col-md-5 m-1">
+                    {this.renderSelectedTea(this.state.selectedTea)}
+                </div>
             </div>
         </div>
     );
