@@ -7,10 +7,33 @@ class Directory extends Component {
             teas: [
                 {
                     id: 0,
-                    name: 'Some Tea Image',
+                    name: 'Black Tea',
                     image: 'assets/images/black-tea.jpg',
-                    elevation: 1233,
                     description: "Have some tea"
+                },
+                {
+                    id: 1,
+                    name: 'White Tea',
+                    image: 'assets/images/white-tea.jpg',
+                    description: "Have some more tea"
+                },
+                {
+                    id: 2,
+                    name: 'Ginseng Tea',
+                    image: 'assets/images/ginseng-tea.jpg',
+                    description: "Even more tea"
+                },
+                {
+                    id: 3,
+                    name: 'Green Tea',
+                    image: 'assets/images/green-tea.jpg',
+                    description: "Also more tea"
+                },
+                {
+                    id: 4,
+                    name: 'Oolong Tea',
+                    image: 'assets/images/oolong-tea.jpg',
+                    description: "More tea for you"
                 }
             ],
         };
