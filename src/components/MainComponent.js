@@ -1,7 +1,8 @@
 import React, { Component } from 'react';
-import { Navbar, NavbarBrand } from 'reactstrap';
 import Directory from './DirectoryComponent';
 import TeaInfo from './TeaInfoComponent';
+import Header from './HeaderComponent';
+import Footer from './FooterComponent';
 import { TEAS } from '../shared/teas';
 
 class Main extends Component {
@@ -19,15 +20,12 @@ class Main extends Component {
 
       render() {
         return (
-        <div>
-          <Navbar dark color="primary">
-          <div className="container">
-              <NavbarBrand href="/">TeaHouse</NavbarBrand>
-          </div>
-          </Navbar>
-          <Directory teas={this.state.teas} onClick={teaId => this.onTeaSelect(teaId)}/>
-          <TeaInfo tea={this.state.teas.filter(tea => tea.id === this.state.selectedTea)[0]} />
-        </div>
+            <div>
+                <Header />
+                <Directory teas={this.state.teas} onClick={teaId => this.onTeaSelect(teaId)}/>
+                <TeaInfo tea={this.state.teas.filter(tea => tea.id === this.state.selectedTea)[0]} />
+                <Footer />
+            </div>
     );
   };
 }
