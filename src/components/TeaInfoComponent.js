@@ -1,34 +1,31 @@
-import React, { Component } from 'react';
+import React from 'react';
 import { Card, CardImg, CardText, CardBody, CardTitle } from 'reactstrap';
 
-class TeaInfo extends Component {
+function RenderTea({tea}) {
+    return (
+        <div className="col-md-5 m-1">
+            <Card>
+                <CardImg top src={tea.image} alt={tea.name} />
+                <CardBody>
+                    <CardTitle>{tea.name}</CardTitle>
+                    <CardText>{tea.description}</CardText>
+                </CardBody>
+            </Card>
+        </div>
+    )
+}
 
-    renderTea(tea) {
+function TeaInfo(props) {
+    if (props.tea) {
         return (
-            <div className="col-md-5 m-1">
-                <Card>
-                    <CardImg top src={tea.image} alt={tea.name} />
-                    <CardBody>
-                        <CardTitle>{tea.name}</CardTitle>
-                        <CardText>{tea.description}</CardText>
-                    </CardBody>
-                </Card>
-            </div>
-        )
-    }
-
-    render() {
-        if (this.props.tea) {
-            return (
-                <div className="container">
-                    <div className="row">
-                        {this.renderTea(this.props.tea)}
-                    </div>
+            <div className="container">
+                <div className="row">
+                    <RenderTea tea={props.tea} />
                 </div>
-            );
-        }
-        return <div />;
+            </div>
+        );
     }
+    return <div />;
 }
 
 export default TeaInfo;
