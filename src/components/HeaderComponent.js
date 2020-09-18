@@ -24,7 +24,7 @@ class Header extends Component {
         return(
             <React.Fragment>
                 <Jumbotron fluid>
-                    <div classNamme="container">
+                    <div className="container">
                         <div className="row">
                             <div className="col">
                                 <h1>Lofi Chai</h1>

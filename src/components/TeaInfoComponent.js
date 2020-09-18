@@ -5,9 +5,8 @@ function RenderTea({tea}) {
     return (
         <div className="col-md-5 m-1">
             <Card>
-                <CardImg top src={tea.image} alt={tea.name} />
+                <CardImg top src={tea.image} alt={tea.name} /> {/*here is the issue*/}
                 <CardBody>
-                    <CardTitle>{tea.name}</CardTitle>
                     <CardText>{tea.description}</CardText>
                 </CardBody>
             </Card>

@@ -31,12 +31,20 @@ class Main extends Component {
             );
         }
 
+        const TeaWithId = ({match}) => {
+            return (
+                <TeaInfo tea={this.state.teas.filter(tea => tea.id === +match.params.teaId)[0]} 
+                />
+            );
+        }
+
         return (
             <div>
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <Directory teas={this.state.teas} />} />
+                    <Route path='/directory/:teaId' component={TeaWithId} />
                     <Redirect to='/home' />
                 </Switch>
                 <Footer />
