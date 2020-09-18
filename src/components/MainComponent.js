@@ -3,27 +3,34 @@ import Directory from './DirectoryComponent';
 import TeaInfo from './TeaInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
+import Home from './HomeComponent';
+import { Switch, Route, Redirect } from 'react-router-dom';
 import { TEAS } from '../shared/teas';
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teas: TEAS,
-      selectedTea: null
+      teas: TEAS
     };
   }
 
-  onTeaSelect(teaId) {
-    this.setState({selectedTea: teaId});
-}
-
       render() {
+        
+        const HomePage = () => {
+            return (
+                <Home />
+            );
+        }
+
         return (
             <div>
                 <Header />
-                <Directory teas={this.state.teas} onClick={teaId => this.onTeaSelect(teaId)}/>
-                <TeaInfo tea={this.state.teas.filter(tea => tea.id === this.state.selectedTea)[0]} />
+                <Switch>
+                    <Route path='/home' component={HomePage} />
+                    <Route exact path='/directory' render={() => <Directory teas={this.state.teas} />} />
+                    <Redirect to='/home' />
+                </Switch>
                 <Footer />
             </div>
     );

@@ -1,9 +1,9 @@
 import React from 'react';
 import { Card, CardImg, CardImgOverlay, CardTitle } from 'reactstrap';
 
-function RenderDirectoryItem({tea, onClick}) {
+function RenderDirectoryItem({tea}) {
     return (
-        <Card onClick={() => onClick(tea.id)}>
+        <Card>
             <CardImg width="100%" src={tea.image} alt={tea.name} />
             <CardImgOverlay>
                 <CardTitle>{tea.name}</CardTitle>
@@ -17,7 +17,7 @@ function Directory(props) {
     const directory = props.teas.map(tea => {
     return (
         <div key={tea.id} className="col-md-5 m-1">
-            <RenderDirectoryItem tea={tea} onClick={props.onClick} />
+            <RenderDirectoryItem tea={tea} />
         </div>
     );
 });

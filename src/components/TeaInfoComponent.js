@@ -12,7 +12,7 @@ function RenderTea({tea}) {
                 </CardBody>
             </Card>
         </div>
-    )
+    );
 }
 
 function TeaInfo(props) {
