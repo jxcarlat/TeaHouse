@@ -28,5 +28,11 @@ export const TEAS = [
         name: "Oolong Tea",
         image: "assets/images/oolong-tea.jpg",
         description: "Oolong tea is a type of tea that is sometimes called \"wulong\" or \"black dragon\" tea. After the tea leaves are picked, they are rolled and allowed to oxidize. Oxidation produces floral notes that characterize many oolongs."
+    },
+    {
+        id: 5,
+        name: "Chai Tea",
+        image: "assets/images/chai-tea.jpg",
+        description: "Chai from India is a spiced milk tea that has become increasingly popular throughout the world. It is generally made up of rich black tea, heavy milk, a combination of various spices, and a sweetner."
     }
 ];
