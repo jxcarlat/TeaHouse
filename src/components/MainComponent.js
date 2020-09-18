@@ -6,12 +6,16 @@ import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { TEAS } from '../shared/teas';
+import { EVENTS } from '../shared/events';
+import { ROOMS } from '../shared/rooms';
 
 class Main extends Component {
   constructor(props) {
     super(props);
     this.state = {
-      teas: TEAS
+      teas: TEAS,
+      events: EVENTS,
+      rooms: ROOMS
     };
   }
 
@@ -19,7 +23,11 @@ class Main extends Component {
         
         const HomePage = () => {
             return (
-                <Home />
+                <Home 
+                    tea={this.state.teas.filter(tea => tea.featured)[0]}
+                    event={this.state.events.filter(event => event.featured)[0]}
+                    room={this.state.rooms.filter(room => room.featured)[0]}
+                />
             );
         }
 
