@@ -1,6 +1,5 @@
 import React from 'react';
-import { Card, CardImg, CardText, CardBody, CardTitle, Breadcrumb, BreadcrumbItem } from 'reactstrap';
-import { Link } from 'react-router-dom';
+import { Card, CardImg, CardText, CardBody } from 'reactstrap';
 
 function RenderTea({tea}) {
     return (
@@ -21,10 +20,6 @@ function TeaInfo(props) {
             <div className="container">
                 <div className="row">
                     <div className="col">
-                        <Breadcrumb>
-                            <BreadcrumbItem><Link to="/directory">Directory</Link></BreadcrumbItem>
-                            <BreadcrumbItem active>{props.tea.name}</BreadcrumbItem>
-                        </Breadcrumb>
                         <h2>{props.tea.name}</h2>
                         <hr />
                     </div>
