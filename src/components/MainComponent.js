@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import Playlist from 'react-mp3-player';
 import Directory from './DirectoryComponent';
 import TeaInfo from './TeaInfoComponent';
 import Header from './HeaderComponent';
@@ -8,6 +9,7 @@ import { Switch, Route, Redirect } from 'react-router-dom';
 import { TEAS } from '../shared/teas';
 import { EVENTS } from '../shared/events';
 import { ROOMS } from '../shared/rooms';
+import { TRACKS } from '../shared/tracks';
 
 class Main extends Component {
   constructor(props) {
@@ -15,7 +17,8 @@ class Main extends Component {
     this.state = {
       teas: TEAS,
       events: EVENTS,
-      rooms: ROOMS
+      rooms: ROOMS,
+      tracks: TRACKS
     };
   }
 
@@ -47,6 +50,7 @@ class Main extends Component {
                     <Route path='/directory/:teaId' component={TeaWithId} />
                     <Redirect to='/home' />
                 </Switch>
+                <Playlist tracks={this.state.tracks} />
                 <Footer />
             </div>
     );

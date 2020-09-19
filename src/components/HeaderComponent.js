@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
-import Playlist from 'react-mp3-player';
 import { Nav, Navbar, NavbarBrand, NavbarToggler, Collapse, NavItem, Jumbotron } from 'reactstrap';
 import { NavLink } from 'react-router-dom';
-import { TRACKS } from '../shared/tracks'
 
 
 
@@ -15,7 +13,6 @@ class Header extends Component {
         this.toggleNav = this.toggleNav.bind(this);
         this.state = {
             isNavOpen: false,
-            tracks: TRACKS
         };
     }
 
@@ -35,9 +32,6 @@ class Header extends Component {
                             <div className="col">
                                 <h1>Lofi Chai</h1>
                                 <h2>come and relax</h2>
-                            </div>
-                            <div className="col">
-                                <Playlist tracks={this.state.tracks} />
                             </div>
                         </div>
                     </div>
