@@ -12,6 +12,11 @@ h1, h2, h3, .card-body>.card-title {
   font-size: 1.25rem;
 }
 
+.carousel-caption {
+  color: #BB45E6;
+  background-color: rgba(0, 0, 0, 0.75);
+}
+
 .card-body {
   background-color: #7F00AD;
   color: #470061;

@@ -35,7 +35,8 @@ class Header extends Component {
                 </Jumbotron>
                 <Navbar light sticky="top" expand="md">
                     <div className="container">
-                        <NavbarBrand className="mr-auto" href="/">Teahouse</NavbarBrand>
+                        <NavbarBrand className="mr-auto" href="/"><img src="/assets/images/lofi.jpg"
+                        height="30" width="30" alt="Lofi Logo" /></NavbarBrand>
                         <NavbarToggler onClick={this.toggleNav} />
                         <Collapse isOpen={this.state.isNavOpen} navbar>
                             <Nav navbar>
@@ -46,7 +47,7 @@ class Header extends Component {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/directory">
-                                        <i className="fa fa-list fa-lg" /> Directory
+                                        <i className="fa fa-coffee fa-lg" /> Teas
                                     </NavLink>
                                 </NavItem>
                                 <NavItem>
@@ -56,7 +57,7 @@ class Header extends Component {
                                 </NavItem>
                                 <NavItem>
                                     <NavLink className="nav-link" to="/room">
-                                        <i className="fa fa-list fa-lg" /> Rooms
+                                        <i className="fa fa-star fa-lg" /> Rooms
                                     </NavLink>
                                 </NavItem>
                             </Nav>
