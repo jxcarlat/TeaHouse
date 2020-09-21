@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
+import { UncontrolledCarousel } from 'reactstrap';
 import Playlist from 'react-mp3-player';
-import Directory from './DirectoryComponent';
-import TeaInfo from './TeaInfoComponent';
 import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
@@ -34,20 +33,12 @@ class Main extends Component {
             );
         }
 
-        const TeaWithId = ({match}) => {
-            return (
-                <TeaInfo tea={this.state.teas.filter(tea => tea.id === +match.params.teaId)[0]} 
-                />
-            );
-        }
-
         return (
             <div>
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path='/directory' render={() => <Directory teas={this.state.teas} />} />
-                    <Route path='/directory/:teaId' component={TeaWithId} />
+                    <Route exact path='/directory' render={() => <UncontrolledCarousel items={this.state.teas} />} />
                     <Redirect to='/home' />
                 </Switch>
                 <Playlist tracks={this.state.tracks} />
