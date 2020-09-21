@@ -42,6 +42,10 @@ h2 {
   padding: 20px 0;
 }
 
+#header {
+  color: purple;
+}
+
 .jumbotron {
   margin: 0;
   padding: 30px;
