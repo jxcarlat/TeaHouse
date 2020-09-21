@@ -1,17 +1,20 @@
 export const EVENTS = [
     {
+        id: 0,
         featured: true,
         src: '/assets/images/ocha-artist.jpg',
         header: 'Ocha',
         caption: "Coming to our venue on September 30th is the local artist Ocha featuring their hit single \"iridscnt\". Event will take place in the basement so get those tickets before they sell out!"
     },
     {
+        id: 1,
         featured: false,
         src: '/assets/images/hm_surf-artist.jpg',
         header: 'HM Surf',
         caption: "We have a very special announcement for October 13th, famous up-and-coming artist HM Surf will be playing on the balcony during our \"Half-Price off chilled specials\". Be sure to stop by and relax to his hit track \"Take Care\"."
     },
     {
+        id: 2,
         featured: false,
         src: "/assets/images/jinsang-artist.jpg",
         header: "Jinsang",
