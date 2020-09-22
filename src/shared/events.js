@@ -11,7 +11,7 @@ export const EVENTS = [
         featured: false,
         src: '/assets/images/hm_surf-artist.jpg',
         header: 'HM Surf',
-        caption: "We have a very special announcement for October 13th, famous up-and-coming artist HM Surf will be playing on the balcony during our \"Half Off Chilled Specials Happy Hour\". Be sure to stop by and relax to his hit track \"Take Care\"."
+        caption: "We have a special shout-out for October 13th, famous up-and-coming artist HM Surf will be playing on the balcony for our \"Surf's Up Crepes and Chai\" event. Be sure to stop by and relax to his hit track \"Take Care\"."
     },
     {
         id: 2,

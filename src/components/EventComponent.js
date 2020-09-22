@@ -44,10 +44,10 @@ function Event(props) {
                 <h3 id="menu">Menu and Event Specials/Discounts</h3>
             </div>
             <div className="row">
-                <div className="col-8">
+                <div className="col-lg-8">
                     <img src="/assets/images/brunch-menu.jpg" alt="Brunch Menu" />
                 </div>
-                <div className="col-4">
+                <div className="col-lg-4">
                     <h3>Surf's Up Crepes and Chai</h3>
                     <p>When you participate in the HM Surf event you can try our limited special HM Surf blueberry crepes ($15) and get a cup of chai tea on the house. Surf's up my dude!</p>
                     <br />
