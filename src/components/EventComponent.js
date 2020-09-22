@@ -39,6 +39,25 @@ function Event(props) {
                     </Media>
                 </div>
             </div>
+            < hr/>
+            <div className="row-12">
+                <h3 id="menu">Menu and Event Specials/Discounts</h3>
+            </div>
+            <div className="row">
+                <div className="col-8">
+                    <img src="/assets/images/brunch-menu.jpg" alt="Brunch Menu" />
+                </div>
+                <div className="col-4">
+                    <h3>Surf's Up Crepes and Chai</h3>
+                    <p>When you participate in the HM Surf event you can try our limited special HM Surf blueberry crepes ($15) and get a cup of chai tea on the house. Surf's up my dude!</p>
+                    <br />
+                    <h3>Ocha with some Mocha</h3>
+                    <p>Come hang with us during the Ocha event and you can try the new Ocha Mocha Latte available for a limited time (or longer if you guys want, we won't be stingy about it).</p>
+                    <br />
+                    <h3>Jinsang Jamboree</h3>
+                    <p>Everything half-off. Yes we are being completely serious here, we just want you guys to come in and experience this one in a lifetime event with Jinsang, you can thank us later.</p>
+                </div>
+            </div>
         </div>
     );
 }

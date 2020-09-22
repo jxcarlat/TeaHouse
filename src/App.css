@@ -30,6 +30,11 @@ h2 {
     color: #A500E0;
 }
 
+#menu {
+  color: #A500E0;
+  text-align: left;
+}
+
 .card-img-overlay .card-title {
   color: #7F00AD;
   background-color: rgba(0, 0, 0, 0.5);
