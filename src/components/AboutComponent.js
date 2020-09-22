@@ -1,32 +1,7 @@
 import React from 'react';
 import { Card, CardBody, CardHeader, Media } from 'reactstrap';
-import { Link } from 'react-router-dom';
-
-
-const RenderPartner = ({event}) => {
-    if (event) {
-        return (
-            <React.Fragment>
-                <Media object src={event.src} alt={event.header} width={150} />
-                <Media body className="ml-5 mb-4">
-                    <Media heading>
-                       {event.header}
-                    </Media>
-                    {event.caption}
-                </Media>
-            </React.Fragment>
-        );
-    }
-    return <div />
-}
 
 function About(props) {
-
-    const events = props.events.map(currentEvent => {
-        return (
-            <Media tag={"li"} key={currentEvent.id}><RenderPartner event={currentEvent}/></Media>
-        );
-    });
 
     return (
         <div className="container">
@@ -38,48 +13,8 @@ function About(props) {
             </div>
             <div className="row row-content">
                 <div className="col-sm-6">
-                    <h3>Our Mission</h3>
-                    <p>We present a curated database of the best campsites in the vast woods and backcountry of the World Wide Web Wilderness. We increase access to adventure for the public while promoting safe and respectful use of resources. The expert wilderness trekkers on our staff personally verify each campsite to make sure that they are up to our standards. We also present a platform for campers to share reviews on campsites they have visited with each other.</p>
-                </div>
-                <div className="col-sm-6">
-                    <Card>
-                        <CardHeader className="bg-primary text-white"><h3>Facts At a Glance</h3></CardHeader>
-                        <CardBody>
-                            <dl className="row">
-                                <dt className="col-6">Founded</dt>
-                                <dd className="col-6">February 3, 2016</dd>
-                                <dt className="col-6">No. of Campsites in 2019</dt>
-                                <dd className="col-6">563</dd>
-                                <dt className="col-6">No. of Reviews in 2019</dt>
-                                <dd className="col-6">4388</dd>
-                                <dt className="col-6">Employees</dt>
-                                <dd className="col-6">42</dd>
-                            </dl>
-                        </CardBody>
-                    </Card>
-                </div>
-                <div className="col">
-                    <Card className="bg-light mt-3">
-                        <CardBody>
-                            <blockquote className="blockquote">
-                                <p className="mb-0">I will not follow where the path may lead, but I will go where there is no path, and I will leave a trail.</p>
-                                <footer className="blockquote-footer">Muriel Strode,{' '}
-                                    <cite title="Source Title">"Wind-Wafted Wild Flowers" -
-                                    The Open Court, 1903</cite>
-                                </footer>
-                            </blockquote>
-                        </CardBody>
-                    </Card>
-                </div>
-            </div>
-            <div className="row row-content">
-                <div className="col-12">
-                    <h3>Community Partners</h3>
-                </div>
-                <div className="col mt-4">
-                    <Media list>
-                        {events}
-                    </Media>
+                    <h3>A Place To Unwind</h3>
+                    <p>Do you seek a place to unwind and relax? A place where you can listen to relaxing music, look at beautiful scenery, all while drinking from a selection of gourmet teas? Well look no further, at Lofi Chai we service all of those needs and provide a little something extra for fans of the increasingly popular genre of music. We gladly represent ourselves as a venue for artists and host events in order to promote everything Lofi, we don’t care if it goes mainstream though, we prefer to stay underground. If you're a niche kind of customer then we’re your niche kind of place, come and check us out sometime and take a load off.</p>
                 </div>
             </div>
         </div>
