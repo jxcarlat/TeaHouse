@@ -1,6 +1,7 @@
+import React from 'react';
+import { Media } from 'reactstrap';
 
-
-const RenderPartner = ({event}) => {
+const RenderEvent = ({event}) => {
     if (event) {
         return (
             <React.Fragment>
@@ -17,15 +18,15 @@ const RenderPartner = ({event}) => {
     return <div />
 }
 
-function About(props) {
+function Event(props) {
 
     const events = props.events.map(currentEvent => {
         return (
-            <Media tag={"li"} key={currentEvent.id}><RenderPartner event={currentEvent}/></Media>
+            <Media tag={"li"} key={currentEvent.id}><RenderEvent event={currentEvent}/></Media>
         );
     });
 
-
+    return(
     <div className="row row-content">
                 <div className="col-12">
                     <h3>Events</h3>
@@ -36,3 +37,7 @@ function About(props) {
                     </Media>
                 </div>
             </div>
+    );
+}
+
+export default Event;
