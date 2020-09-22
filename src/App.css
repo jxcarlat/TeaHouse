@@ -3,7 +3,7 @@ body {
   background-color: #47006B;
 }
 
-h1, h2, h3, .card-body>.card-title {
+h1, h2, h3, h4, .card-body>.card-title {
   font-family: "Lobster", cursive;
 }
 
