@@ -4,7 +4,7 @@ export const ROOMS = [
         featured: true,
         src: '/assets/images/balcony-venue.jpg',
         header: 'Balcony',
-        caption: "Come take a look of the city at night, guaranteed to put you at ease as you sip from our special teas."
+        caption: "Come take a gander of the city at night, guaranteed to put you at ease as you sip from our special teas."
     },
     {
         id: 1,

@@ -10,11 +10,11 @@ function Footer(props) {
                         <h5 id="header">Links</h5>
                         <ul className="list-unstyled">
                             <li><Link to='/home'>Home</Link></li>
-                            <li><Link to='/directory'>Teas</Link></li>
+                            <li><Link to='/tea'>Teas</Link></li>
                             <li><Link to='/aboutus'>About</Link></li>
                             <li><Link to='/room'>Rooms</Link></li>
                             <li><Link to='/event'>Events</Link></li>
-                        </ul><br /><br /><br />
+                        </ul><br /><br /><br /><br />
                     </div>
                     <div className="col-6 col-sm-3 text-center offset-sm-6">
                         <h5 id="header">Social</h5>

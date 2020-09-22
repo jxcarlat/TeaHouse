@@ -41,7 +41,7 @@ class Main extends Component {
                 <Header />
                 <Switch>
                     <Route path='/home' component={HomePage} />
-                    <Route exact path='/directory' render={() => <UncontrolledCarousel items={this.state.teas} />} />
+                    <Route exact path='/tea' render={() => <UncontrolledCarousel items={this.state.teas} />} />
                     <Route exact path='/aboutus' component={About} />
                     <Route exact path='/event' render={() => <Event events={this.state.events} />} />
                     <Route exact path='/room' render={() => <Room rooms={this.state.rooms} /> } />
