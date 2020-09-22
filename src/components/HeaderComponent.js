@@ -60,6 +60,11 @@ class Header extends Component {
                                         <i className="fa fa-star fa-lg" /> Rooms
                                     </NavLink>
                                 </NavItem>
+                                <NavItem>
+                                    <NavLink className="nav-link" to="/event">
+                                        <i className="fa fa-star fa-lg" /> Events
+                                    </NavLink>
+                                </NavItem>
                             </Nav>
                         </Collapse>
                     </div>

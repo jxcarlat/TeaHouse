@@ -5,6 +5,8 @@ import Header from './HeaderComponent';
 import Footer from './FooterComponent';
 import Home from './HomeComponent';
 import About from './AboutComponent';
+import Event from './EventComponent';
+import Room from './RoomComponent';
 import { Switch, Route, Redirect } from 'react-router-dom';
 import { TEAS } from '../shared/teas';
 import { EVENTS } from '../shared/events';
@@ -40,7 +42,9 @@ class Main extends Component {
                 <Switch>
                     <Route path='/home' component={HomePage} />
                     <Route exact path='/directory' render={() => <UncontrolledCarousel items={this.state.teas} />} />
-                    <Route exact path='/aboutus' render={() => <About events={this.state.events} />} />
+                    <Route exact path='/aboutus' component={About} />
+                    <Route exact path='/event' render={() => <Event events={this.state.events} />} />
+                    <Route exact path='/room' render={() => <Room rooms={this.state.rooms} /> } />
                     <Redirect to='/home' />
                 </Switch>
                 <Playlist tracks={this.state.tracks} />

@@ -27,9 +27,11 @@ function Event(props) {
     });
 
     return(
-    <div className="row row-content">
+        <div className="container">
+            <div className="row row-content">
                 <div className="col-12">
-                    <h3>Events</h3>
+                    <h3 id="events">Events</h3>
+                    <hr />
                 </div>
                 <div className="col mt-4">
                     <Media list>
@@ -37,6 +39,7 @@ function Event(props) {
                     </Media>
                 </div>
             </div>
+        </div>
     );
 }
 

@@ -1,7 +1,6 @@
 import React from 'react';
-import { Card, CardBody, CardHeader, Media } from 'reactstrap';
 
-function About(props) {
+function About() {
 
     return (
         <div className="container">
