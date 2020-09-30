@@ -1,16 +1,27 @@
 import React from 'react';
 import { Media } from 'reactstrap';
+import { FadeTransform, Fade, Stagger } from 'react-animation-components';
 
 const RenderEvent = ({event}) => {
     if (event) {
         return (
             <React.Fragment>
-                <Media object src={event.src} alt={event.header} width={150} />
+                <FadeTransform
+                    in
+                    transformProps={{
+                        exitTransform: 'translateY(5%)'
+                }}>
+                    <Media object src={event.src} alt={event.header} width={150} />
+                </FadeTransform>
                 <Media body className="ml-5 mb-4">
-                    <Media heading>
-                       {event.header}
-                    </Media>
-                    {event.caption}
+                    <Stagger in>
+                        <Fade in>
+                            <Media heading>
+                            {event.header}
+                            </Media>
+                            {event.caption}
+                        </Fade>
+                    </Stagger>
                 </Media>
             </React.Fragment>
         );
