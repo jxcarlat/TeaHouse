@@ -10,7 +10,7 @@ function RenderCard({item}) {
         in
         transformProps={{
             exitTransform: 'translateY(5%)'
-        }}>
+        }} duration="300">
             <Card>
                 <CardImg src={item.src} alt={item.header} />
                 <CardBody>

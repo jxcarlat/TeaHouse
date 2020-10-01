@@ -10,11 +10,11 @@ const RenderEvent = ({event}) => {
                     in
                     transformProps={{
                         exitTransform: 'translateY(5%)'
-                }}>
+                }} duration="300">
                     <Media object src={event.src} alt={event.header} width={150} />
                 </FadeTransform>
                 <Media body className="ml-5 mb-4">
-                    <Stagger in>
+                    <Stagger in duration="300">
                         <Fade in>
                             <Media heading>
                             {event.header}
