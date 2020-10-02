@@ -10,6 +10,8 @@
     "bootstrap-social": "5.1.1",
     "howler": "^2.2.0",
     "react": "^16.13.1",
+    "react-animated-css": "^1.2.1",
+    "react-animated-css-onscroll": "^1.2.1",
     "react-animation-components": "3.0.0",
     "react-dom": "^16.13.1",
     "react-mp3-player": "^0.8.2",
