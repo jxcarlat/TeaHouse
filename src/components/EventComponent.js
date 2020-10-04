@@ -1,6 +1,6 @@
 import React from 'react';
 import { Media } from 'reactstrap';
-import { FadeTransform, Fade, Stagger } from 'react-animation-components';
+import { Fade, Stagger } from 'react-animation-components';
 import { AnimatedOnScroll } from 'react-animated-css-onscroll';
 
 const RenderEvent = ({event}) => {
