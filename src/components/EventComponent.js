@@ -7,22 +7,12 @@ const RenderEvent = ({event}) => {
     if (event) {
         return (
             <React.Fragment>
-                <FadeTransform                         
-                    in
-                    transformProps={{
-                    exitTransform: 'translateY(5%)'
-                    }} duration="300">
-                    <Media object src={event.src} alt={event.header} width={150} />
-                </FadeTransform>
+                <Media object src={event.src} alt={event.header} width={150} />
                 <Media body className="ml-5 mb-4">
-                    <Stagger in duration="300">
-                        <Fade in>
-                            <Media heading>
-                            {event.header}
-                            </Media>
-                            {event.caption}
-                        </Fade>
-                    </Stagger>
+                    <Media heading>
+                    {event.header}
+                    </Media>
+                    {event.caption}
                 </Media>
             </React.Fragment>
         );
@@ -34,7 +24,9 @@ function Event(props) {
 
     const events = props.events.map(currentEvent => {
         return (
-            <Media tag={"li"} key={currentEvent.id}><RenderEvent event={currentEvent}/></Media>
+            <Fade in key={currentEvent.id}>
+                <Media tag={"li"}><RenderEvent event={currentEvent}/></Media>
+            </Fade>
         );
     });
 
@@ -47,7 +39,7 @@ function Event(props) {
                 </div>
                 <div className="col mt-4">
                     <Media list>
-                        {events}
+                        <Stagger in duration="300">{events}</Stagger>
                     </Media>
                 </div>
             </div>
